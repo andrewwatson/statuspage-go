@@ -2,7 +2,6 @@ package statuspage
 
 import (
 	"context"
-	"fmt"
 )
 
 const (
@@ -124,8 +123,7 @@ func (s *IncidentService) UpdateIncident(ctx context.Context, pageID, status str
 	componentMap := make(map[string]string, 0)
 
 	for _, c := range incident.Components {
-		componentMap[c.ID] = status
-		fmt.Printf("COMP %s STATUS %s\n", c.ID, status)
+		componentMap[c.ID] = status		
 	}
 
 
